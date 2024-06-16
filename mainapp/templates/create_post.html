@@ -1,0 +1,20 @@
+{% block page_title %}
+    <h2>create a new post</h2>
+{% endblock page_title %}
+
+{% block page_content %}
+
+    <h3>Create a post</h3>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            {{ form.author }}
+        </div>
+        <div>
+            {{ form.tittle }}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+{% endblock page_content %}
